@@ -12,7 +12,7 @@ vim.o.expandtab = true
 vim.o.autoindent = true
 
 -- Prevent wrap
-vim.o.wrap = true
+vim.o.wrap = false
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
@@ -27,6 +27,10 @@ vim.o.undofile = true
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- Appearance
+vim.o.termguicolors = true
+vim.o.signcolumn = "yes"
 
 
 -- vim.o.mouse:append("a")
