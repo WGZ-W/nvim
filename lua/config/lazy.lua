@@ -22,9 +22,10 @@ require("lazy").setup({
     -- import your plugins
 --    { import = "plugins" },
  -- },
-    require("plugins.autocomplete"),
+--    require("plugins.autocomplete"),
     require("plugins.colorscheme"),
     require("plugins.git"),
+    require("plugins.mason"),
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
 --  install = { colorscheme = { "habamax" } },

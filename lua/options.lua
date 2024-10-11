@@ -31,3 +31,5 @@ vim.o.smartcase = true
 
 -- vim.o.mouse:append("a")
 -- vim.o.clipboard:append("unnamedplus")
+
+
