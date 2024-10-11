@@ -20,13 +20,14 @@ vim.opt.rtp:prepend(lazypath)
 vim.keymap.set("n", "<leader>pl", ":Lazy<CR>", { noremap = true })
 
 
-
 -- Setup lazy.nvim
 require("lazy").setup({
---    require("plugins.autocomplete"),
+    require("plugins.autocomplete"),
     require("plugins.colorscheme"),
     require("plugins.git"),
     require("plugins.mason"),
+    require("plugins.nvim-tree"),
+    require("plugins.treesitter"),
 --    require("plugins.lualine"),
 })
 
