@@ -28,7 +28,7 @@ require("lazy").setup({
     require("plugins.mason"),
     require("plugins.nvim-tree"),
     require("plugins.treesitter"),
---    require("plugins.lualine"),
+    require("plugins.lualine"),
 })
 
 
