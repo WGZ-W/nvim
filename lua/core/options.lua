@@ -1,6 +1,3 @@
-
-
-
 -- Make line numbers default
 vim.o.relativenumber = true
 vim.o.number = true
@@ -13,6 +10,9 @@ vim.o.autoindent = true
 
 -- Prevent wrap
 vim.o.wrap = false
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 10
 
 -- Show which line your cursor is on
 vim.o.cursorline = true
@@ -32,8 +32,15 @@ vim.o.smartcase = true
 vim.o.termguicolors = true
 vim.o.signcolumn = "yes"
 
-
 -- vim.o.mouse:append("a")
 -- vim.o.clipboard:append("unnamedplus")
 
-
+-- Highlight when yanking (copying) text
+--  Try it with `yap` in normal mode
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
