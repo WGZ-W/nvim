@@ -7,6 +7,7 @@ local M = {
 	opts = {
 		ensure_installed = {
 			"bash",
+			"python",
 			"c",
 			"diff",
 			"html",
@@ -14,7 +15,6 @@ local M = {
 			"luadoc",
 			"markdown",
 			"markdown_inline",
-			"query",
 			"vim",
 			"vimdoc",
 		},

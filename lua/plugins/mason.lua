@@ -2,10 +2,7 @@ return {
 	"williamboman/mason-lspconfig.nvim",
 	lazy = false,
 	dependencies = {
-		{
-			"williamboman/mason.nvim",
-			build = ":MasonUpdate",
-		},
+		"williamboman/mason.nvim",
 		"neovim/nvim-lspconfig",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
@@ -21,11 +18,17 @@ return {
 			},
 		})
 
-		require("mason-lspconfig").setup()
+		require("mason-lspconfig").setup({
+      ensure_installed = {
+        "pylsp",
+        "lua_ls",
+      }
+    })
+
 		require("mason-tool-installer").setup({
 			ensure_installed = {
-				"lua-language-server",
 				"stylua",
+        "isort",
 				"rust-analyzer",
 			},
 		})
