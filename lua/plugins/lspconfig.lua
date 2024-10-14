@@ -13,7 +13,4 @@ return {
 		-- Allows extra capabilities provided by nvim-cmp
 		"hrsh7th/cmp-nvim-lsp",
 	},
-	config = function()
-		local lspconfig = require("lspconfig")
-	end,
 }

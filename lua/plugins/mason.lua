@@ -19,16 +19,16 @@ return {
 		})
 
 		require("mason-lspconfig").setup({
-      ensure_installed = {
-        "pylsp",
-        "lua_ls",
-      }
-    })
+			ensure_installed = {
+				"pylsp",
+				"lua_ls",
+			},
+		})
 
 		require("mason-tool-installer").setup({
 			ensure_installed = {
 				"stylua",
-        "isort",
+				"isort",
 				"rust-analyzer",
 			},
 		})
