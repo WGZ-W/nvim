@@ -28,7 +28,7 @@ require("lazy").setup({
 	require("plugins.treesitter"),
 	require("plugins.lualine"),
 	require("plugins.lspconfig"),
-	-- require("plugins.autoformat"),
+	require("plugins.autoformat"),
 })
 
 
