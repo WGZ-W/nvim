@@ -8,6 +8,7 @@ return {
 		"hrsh7th/cmp-cmdline", -- cmdline auto-completion
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
+		"williamboman/mason-lspconfig.nvim",
 	},
 
 	config = function()
@@ -17,12 +18,12 @@ return {
 		-- Set up lspconfig.
 		-- Add additional capabilities supported by nvim-cmp
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
+		local lspconfig = require("lspconfig")
 		-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 		-- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 		local servers = { "rust_analyzer", "ts_ls", "pylsp", "lua_ls" }
 		for _, lsp in ipairs(servers) do
-			require("lspconfig")[lsp].setup({
+			lspconfig[lsp].setup({
 				-- on_attach = my_custom_on_attach,
 				capabilities = capabilities,
 			})
