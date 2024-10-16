@@ -34,7 +34,7 @@ vim.keymap.set("n", "<leader>pl", ":Lazy<CR>", { noremap = true })
 
 -- Setup lazy.nvim
 require("lazy").setup({
-	require("plugins.cmp"),
+	require("plugins.nvim-cmp"),
 	require("plugins.colorscheme"),
 	require("plugins.git"),
 	require("plugins.mason"),
