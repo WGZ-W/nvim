@@ -11,6 +11,11 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 
+	opts = {
+		config = function()
+			local luasnip = require("luasnip")
+		end,
+	},
 	config = function()
 		local luasnip = require("luasnip")
 		local cmp = require("cmp")
