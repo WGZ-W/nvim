@@ -37,10 +37,11 @@ require("lazy").setup({
 	require("plugins.nvim-cmp"),
 	require("plugins.colorscheme"),
 	require("plugins.git"),
-	require("plugins.mason"),
+	--	require("plugins.mason"),
 	require("plugins.nvim-tree"),
 	require("plugins.treesitter"),
 	require("plugins.lualine"),
 	require("plugins.lspconfig"),
 	require("plugins.autoformat"),
+	require("plugins.nvim-telescope"),
 })
