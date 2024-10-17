@@ -9,9 +9,11 @@
 --   term_mode = "t",
 --   command_mode = "c",
 
+-- Set keymap noremap and silent.
 local opts = { noremap = true, silent = true }
 
 -- Quickly quit and write
+--
 -- vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", opts)
 -- vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", opts)
 
@@ -28,9 +30,11 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagn
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
-vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+--
+-- vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 -- TIP: Disable arrow keys in normal mode
+--
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 -- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
@@ -48,6 +52,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- Move one line or multiple lines
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
+
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

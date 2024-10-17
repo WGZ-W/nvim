@@ -5,7 +5,8 @@
 --
 -- Use the `dependencies` key to specify the dependencies of a particular plugin
 
-return { -- Fuzzy Finder (files, lsp, etc)
+return { 
+  -- Fuzzy Finder (files, lsp, etc)
 	"nvim-telescope/telescope.nvim",
 	event = "VimEnter",
 	branch = "0.1.x",

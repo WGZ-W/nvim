@@ -17,6 +17,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Set some keymap there
+--
+-- vim.keymap.set("n", "<leader>pl", ":Lazy<CR>", { noremap = true })
+
+
 -- [[ Configure and install plugins ]]
 --
 --  To check the current status of your plugins, run
@@ -28,20 +33,18 @@ vim.opt.rtp:prepend(lazypath)
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-
--- Set some keymap there
-vim.keymap.set("n", "<leader>pl", ":Lazy<CR>", { noremap = true })
-
 -- Setup lazy.nvim
 require("lazy").setup({
-	require("plugins.nvim-cmp"),
-	require("plugins.colorscheme"),
-	require("plugins.git"),
-	--	require("plugins.mason"),
-	require("plugins.nvim-tree"),
-	require("plugins.treesitter"),
-	require("plugins.lualine"),
-	require("plugins.lspconfig"),
-	require("plugins.autoformat"),
-	require("plugins.nvim-telescope"),
+	require("plugins.which-key"),
+	require("plugins.telescope"),
+--	require("plugins.nvim-cmp"),
+--	require("plugins.colorscheme"),
+--	require("plugins.git"),
+--	require("plugins.mason"),
+--	require("plugins.nvim-tree"),
+--	require("plugins.treesitter"),
+--	require("plugins.lualine"),
+--	require("plugins.lspconfig"),
+--	require("plugins.autoformat"),
+--	require("plugins.gitsigns"),
 })
