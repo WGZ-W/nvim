@@ -29,7 +29,7 @@ return {
 			ensure_installed = {
 				"stylua",
 				"isort",
-				"rust-analyzer",
+				-- "rust-analyzer",
 			},
 		})
 	end,
