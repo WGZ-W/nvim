@@ -42,6 +42,11 @@ return { -- Autocompletion
 		local luasnip = require("luasnip")
 		luasnip.config.setup({})
 
+		-- Autopairs
+		-- If you want insert '(' after select function or method item.
+		local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+		cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
+
 		cmp.setup({
 			snippet = {
 				expand = function(args)
@@ -86,7 +91,8 @@ return { -- Autocompletion
 				-- Accept ([y]es) the completion.
 				--  This will auto-import if your LSP supports it.
 				--  This will expand snippets if the LSP sent a snippet.
-				["<C-y>"] = cmp.mapping.confirm({ select = true }),
+				-- ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+				["<CR>"] = cmp.mapping.confirm({ select = true }),
 
 				-- If you prefer more traditional completion keymaps,
 				-- you can uncomment the following lines
