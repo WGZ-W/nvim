@@ -15,18 +15,34 @@ vim.g.have_nerd_font = true
 -- Make line numbers default.
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
--- Experiment for yourself to see if you like it!
 vim.opt.relativenumber = true
+
+-- convert tabs to spaces
+vim.opt.expandtab = true
+
+-- make indenting smarter again
+vim.opt.smartindent = true
+
+-- the number of spaces inserted for each indentation
+vim.opt.shiftwidth = 4
+
+-- insert 4 spaces for a tab
+vim.opt.tabstop = 4
+
+-- display lines as one long line
+vim.opt.wrap = false
+
+-- Show which line your cursor is on
+vim.opt.cursorline = true
+
+-- Minimal number of screen lines to keep above and below the cursor.
+vim.opt.scrolloff = 10
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
-
--- Set the background to dark
---
--- vim.o.background = "dark"
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
@@ -69,27 +85,5 @@ vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
 
--- Show which line your cursor is on
-vim.opt.cursorline = true
-
--- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 10
-
 -- so that `` is visible in markdown files
 vim.opt.conceallevel = 0
-
--- convert tabs to spaces
-vim.opt.expandtab = true
-
--- make indenting smarter again
-vim.opt.smartindent = true
-
--- the number of spaces inserted for each indentation
-vim.opt.shiftwidth = 2
-
--- insert 2 spaces for a tab
-vim.opt.tabstop = 2
-
--- display lines as one long line
-vim.opt.wrap = false
-
