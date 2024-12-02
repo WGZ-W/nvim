@@ -45,6 +45,7 @@ require("lazy").setup({
 	require("plugins.nvim-tree"),
 	require("plugins.markdown-preview"),
 	require("plugins.autopairs"),
+	require("plugins.bufferline"),
 	--	require("plugins.git"),
 	--	require("plugins.mason"),
 	--	require("plugins.gitsigns"),

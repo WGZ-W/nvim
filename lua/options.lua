@@ -87,3 +87,6 @@ vim.opt.inccommand = "split"
 
 -- so that `` is visible in markdown files
 vim.opt.conceallevel = 0
+
+-- the need of buffleline
+vim.opt.termguicolors = true
