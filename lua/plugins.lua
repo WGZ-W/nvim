@@ -20,4 +20,6 @@ require("lazy").setup({
   require("plugins.lualine"),
   require("plugins.nvim-tree"),
   require("plugins.bufferline"),
+  require("plugins.cmp"),
+  require("plugins.lspconfig"),
 })

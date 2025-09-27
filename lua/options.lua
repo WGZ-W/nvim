@@ -91,3 +91,8 @@ vim.opt.conceallevel = 0
 
 -- the need of buffleline
 vim.opt.termguicolors = true
+
+vim.filetype.plugin = true
+vim.filetype.lua = true
+-- 或简单启用默认行为
+vim.cmd('filetype plugin indent on')
